@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5</title>
+    <link rel="stylesheet" href="style_task5.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <h1>Менеджер задач</h1>
+        <p>Получите список To-Do по ID пользователя (1–10)</p>
+    </div>
+    <div class="input-group">
+        <div class="input-field">
+            <label>ID пользователя</label>
+            <input type="number" id="userIdInput" placeholder="Например: 3" value="3" min="1">
+        </div>
+        <button id="fetchButton">Получить список задач</button>
+    </div>
+    <div class="result-area" id="resultArea">
+        <div class="message">
+            Введите ID пользователя и нажмите "Получить список задач"
+        </div>
+    </div>
+    <footer>
+        JSONPlaceholder API — тестовые данные. Доступны userId от 1 до 10.
+    </footer>
+</div>
+
+<script src="5.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #f6f9fc 0%, #eef2f5 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(2px);
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.header {
+    background: #1e2a3e;
+    padding: 1.5rem 2rem;
+    color: white;
+}
+
+.header h1 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    font-size: 1.75rem;
+    letter-spacing: -0.3px;
+}
+
+.header p {
+    margin: 0;
+    opacity: 0.75;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    padding: 1.75rem 2rem 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    background: white;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.input-field {
+    flex: 2;
+    min-width: 160px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5b6e8c;
+    margin-bottom: 0.4rem;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #ffffff;
+    transition: 0.2s;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+button {
+    background: #3b82f6;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.result-area {
+    padding: 1.5rem 2rem 2rem 2rem;
+    background: #ffffff;
+}
+
+.message {
+    background: #f1f5f9;
+    border-radius: 1.25rem;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    color: #1e293b;
+    font-weight: 500;
+    border-left: 5px solid #facc15;
+}
+
+.error-message {
+    background: #fee2e2;
+    border-left-color: #ef4444;
+    color: #991b1b;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.task-item {
+    background: #fafcff;
+    border-radius: 1rem;
+    border: 1px solid #eef2f8;
+    padding: 0.9rem 1.2rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.task-item:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transform: translateX(3px);
+}
+
+.task-status {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+}
+
+.task-status input {
+    width: 20px;
+    height: 20px;
+    cursor: default;
+    pointer-events: none;
+    accent-color: #22c55e;
+}
+
+.task-title {
+    flex: 1;
+    line-height: 1.45;
+    word-break: break-word;
+}
+
+.completed-task .task-title {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.badge {
+    font-size: 0.7rem;
+    background: #eef2ff;
+    border-radius: 30px;
+    padding: 0.2rem 0.7rem;
+    color: #1e3a8a;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    font-size: 0.85rem;
+    background: #f1f4f9;
+    border-radius: 2rem;
+    padding: 0.3rem 1rem;
+    color: #2c3e66;
+}
+
+footer {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: #f8fafc;
+    color: #5c6f87;
+    border-top: 1px solid #ecf3f9;
+}
